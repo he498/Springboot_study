@@ -1,0 +1,54 @@
+##k = v
+#
+##可以注入到配置类中
+##普通的k-v
+#name: ming
+##对象
+#student1:
+#  name: ming
+#  age: 3
+#
+##行内写法
+#student: {name: ming,age: 3}
+#
+##数组
+#pets:
+#  - cat
+#  - dog
+#
+#pets2: [cat,dog,pig]
+#
+#person:
+#  name: ming
+#  age: 6
+#  happy: false
+#  birth: 2021/09/02
+#  maps: {k1: v1,k2: v2}
+#  lists:
+#    - code
+#    - music
+#    - girl
+#  dog:
+#    name: 富贵
+#    age: 3
+
+server:
+  port: 8081
+spring:
+  profiles:
+    active: dev
+
+---
+server:
+  port: 8082
+spring:
+  profiles: dev
+
+---
+server:
+  port: 8083
+spring:
+  profiles: test
+
+
+
